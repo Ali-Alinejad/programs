@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: gray;
+    text-align: center;
+
+
+
+}
+
+.container {
+    border: 1px solid black;
+    width: 50%;
+    height: 60vh;
+    margin: auto;
+    background-image: linear-gradient(to left top, #1a5fc7, #0091e8, #00b8cb, #00d688, #b4e743);
+
+}
+
+.top {
+    height: 50px;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+}
+
+.searchbar {
+    border: none;
+    width: 70%;
+    border-radius: 30px;
+    height: 50px;
+    margin-left: 2%;
+    background-color: #f1f1f1;
+    font-size: large;
+    text-align: center;
+    color: rgba(128, 128, 128, 0.637);
+
+}
+
+.serachbtn {
+    border: none;
+    margin-left: 3%;
+    width: 20%;
+    height: 50px;
+    border-radius: 100px;
+}
+
+
+.mid {
+    background-image: url("weather\ icons/sun.png");
+
+    margin-top: 20px;
+    height: 40%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 30%;
+}
+
+.notif {
+    font-size: 50px;
+    font-family: oswald;
+
+}
+
+.city {
+    font-size: smaller;
+}
