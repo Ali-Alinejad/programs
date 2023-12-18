@@ -148,19 +148,21 @@ body {
 
 .notif {
 
-    font-size: 50px;
+    font-size: 120px;
     font-family: oswald;
-    text-align: center;
     background-color: #0066b9;
     display: grid;
+    margin-top: 55%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
 }
 
 .city {
     grid-area: 2 / 1 / 3 / 2;
+    font-size: 40%;
+    margin-left: 30%;
+    margin-top: 20%;
+    font-family: cursive;
 }
 
 .temp {
@@ -219,6 +221,7 @@ body {
     border: 1px solid;
     height: 100%;
     width: 100%;
+
 }
 
 .detail {
@@ -227,13 +230,43 @@ body {
     text-align: center;
     grid-area: 3 / 11 / 13 / 13;
     background-color: aquamarine;
-}
-
-.detail label {
-    width: 10%;
-    margin: 0 3%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
 }
 
 .material-symbols-outlined {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.wind,
+.deg,
+.weather,
+.humidity,
+.pressure {
+    border: 1px solid blue;
+
+}
+
+.wind {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.deg {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.weather {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.humidity {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.pressure {
+    grid-area: 5 / 1 / 6 / 2;
 }
