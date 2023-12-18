@@ -11,6 +11,6 @@
   "prettier.arrowParens": "always",
   "editor.tabSize": 2,
   "editor.tabCompletion": "on",
-  "printWidth": 100,
+  "printWidth": 110,
   "proseWrap": "desable"
 }
