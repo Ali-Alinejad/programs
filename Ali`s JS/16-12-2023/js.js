@@ -10,11 +10,11 @@ const click = document.querySelector(".btn-conteiner");
     var data = await response.json();
     document.querySelector(".city").textContent = data.name;
     document.querySelector(".temp").textContent = Math.round(data.main.temp) + 'c';
-    document.querySelector(".wind").textContent = data.wind.speed + "m/s" ;
-    document.querySelector(".deg").textContent = data.wind.deg;
+    document.querySelector(".wind").textContent ="windspeed:"+ data.wind.speed + "m/s" ;
+    document.querySelector(".deg").textContent ="deg:"+ data.wind.deg;
     document.querySelector(".weather").textContent = data.weather[0].main;
-    document.querySelector(".humidity").textContent =data.main.humidity+"%";
-    document.querySelector(".pressure").textContent = data.main.pressure+"hPa";
+    document.querySelector(".humidity").textContent ="humidity:"+data.main.humidity+"%";
+    document.querySelector(".pressure").textContent = "pressure:"+data.main.pressure+"hPa";
     Math.trunc(data.main.temp) + "c";
     console.log(data);
     if (data.weather[0].main === "Clear") {
