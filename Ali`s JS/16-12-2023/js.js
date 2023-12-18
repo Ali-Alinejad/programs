@@ -28,6 +28,9 @@ const click = document.querySelector(".btn-conteiner");
     }
     else if (data.weather[0].main === "Rain") {
        document.querySelector(".midl").style.background = "url('weather\ icons/Rainyy.png')";
+     }
+     else if (data.weather[0].main === "Haze") {
+       document.querySelector(".midl").style.background = "url('weather\ icons/haze.png')";
     }
 
 }
