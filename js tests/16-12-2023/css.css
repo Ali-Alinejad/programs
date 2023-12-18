@@ -7,20 +7,12 @@
 
 body {
     background-color: gray;
-    text-align: center;
 
 
 
-}
-
-.container {
-    border: 1px solid black;
-    width: 50%;
-    height: 60vh;
-    margin: auto;
-    background-image: linear-gradient(to left top, #1a5fc7, #0091e8, #00b8cb, #00d688, #b4e743);
 
 }
+
 
 .top {
     height: 50px;
@@ -30,46 +22,226 @@ body {
     display: flex;
 }
 
+.btn-conteiner {
+    display: flex;
+    justify-content: center;
+    --color-text: #ffffff;
+    --color-background: rgba(236, 236, 236, 0.548);
+    --color-outline: #ffffff;
+    --color-shadow: #00000080;
+}
+
+.btn-content {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+    color: var(--color-text);
+    background: var(--color-background);
+    transition: 1s;
+
+    border: none;
+    margin: auto;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.btn-content:hover,
+.btn-content:focus {
+    transition: 0.5s;
+    -webkit-animation: btn-content 1s;
+    animation: btn-content 1s;
+    outline: 0.1em solid transparent;
+    outline-offset: 0.2em;
+    box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+    transition: 0.5s;
+    margin-right: 0px;
+    transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+    transition: 0.5s;
+    margin-right: 50px;
+}
+
+.icon-arrow {
+    width: 10px;
+    margin-left: 10px;
+    position: relative;
+
+}
+
+/* SVG */
+#arrow-icon-one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+
+    50% {
+        fill: var(--color-background);
+    }
+
+    100% {
+        fill: white;
+    }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+    0% {
+        outline: 0.2em solid var(--color-background);
+        outline-offset: 0;
+    }
+}
+
+@keyframes btn-content {
+    0% {
+        outline: 0.2em solid var(--color-background);
+        outline-offset: 0;
+    }
+}
+
 .searchbar {
     border: none;
-    width: 70%;
+    width: 20%;
     border-radius: 30px;
     height: 50px;
     margin-left: 2%;
-    background-color: #f1f1f1;
+    background-color: #fffafaaf;
     font-size: large;
     text-align: center;
     color: rgba(128, 128, 128, 0.637);
 
 }
 
-.serachbtn {
-    border: none;
-    margin-left: 3%;
-    width: 20%;
-    height: 50px;
-    border-radius: 100px;
-}
 
 
 .mid {
     background-image: url("weather\ icons/sun.png");
 
-    margin-top: 20px;
+    z-index: 0;
     height: 40%;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 30%;
+    background-size: 11%;
+    left: 0;
+
+
 }
 
 .notif {
+
     font-size: 50px;
     font-family: oswald;
+    text-align: center;
+    height: 20%;
 
 }
 
 .city {
-    font-size: smaller;
+    font-size: 35px;
+    color: #ffffffaf;
+}
+
+
+.main {
+    display: grid;
+
+
+}
+
+.container {
+
+    width: 100%;
+    height: 50vh;
+    border-radius: 25px;
+    grid-row: 1/4;
+    grid-column: 1/3;
+    z-index: 0;
+
+}
+
+.daily {
+    display: flex;
+    flex-grow: 20px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 25vh;
+    border: #0066b9;
+    color: rebeccapurple;
+    z-index: 10;
+    inset: 10;
+
+
+}
+
+.midl {
+    background-image: url("weather\ icons/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #fffefe8f;
+
+
+}
+
+.day1,
+.day2,
+.day3,
+.day4,
+.day5,
+.day6 {
+    margin: 0 2px;
+    border: 1px solid;
+    height: 100%;
+    width: 100%;
+}
+
+.detail {
+    font-size: 25px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.detail label {
+    width: 10%;
+    margin: 0 3%;
+}
+
+.material-symbols-outlined {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
